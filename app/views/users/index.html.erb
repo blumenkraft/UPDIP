@@ -1,0 +1,7 @@
+<h1>Users#index</h1>
+
+<%= @users.each do |user| -%>
+    <div style="padding: 20px; margin: 30px; background: #7a88ff">
+      <p><%= user.name -%></p>
+    </div>
+<% end %>
