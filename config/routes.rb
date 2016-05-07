@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/alter', as: 'rails_admin'
   get 'users/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,7 +1,37 @@
+
+<script type="text/javascript">
+  /* <![CDATA[ */
+  (function() {
+    var s = document.createElement('script');
+    var t = document.getElementsByTagName('script')[0];
+
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//api.flattr.com/js/0.6/load.js?mode=auto';
+
+    t.parentNode.insertBefore(s, t);
+  })();
+  /* ]]> */
+</script>
+
+
 <h1>Users#index</h1>
 
 <%= @users.each do |user| -%>
-    <div style="padding: 20px; margin: 30px; background: #7a88ff">
-      <p><%= user.name -%></p>
+    <div class="jumbotron">
+      <h3><%= user.name -%></h3>
+      <ul>
+        <% unless user.flattr.blank? %>
+          <li><p><%= user.flattr -%></p></li>
+
+            <a class="FlattrButton" style="display:none;"
+               title="This is my title"
+               rel="flattr;uid:<%= user.flattr -%>;category:text;tags:tag,tag2,tag3;"
+               href="http://wp.local/?p=444">
+            </a>
+
+        <% end %>
+      </ul>
+
     </div>
 <% end %>
