@@ -19,6 +19,9 @@
 
 <%= @users.each do |user| -%>
     <div class="jumbotron">
+
+      <%= image_tag user.avatar.url, style: 'width: 200px' -%>
+
       <h3><%= user.name -%></h3>
       <ul>
         <% unless user.flattr.blank? %>
