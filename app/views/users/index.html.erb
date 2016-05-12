@@ -1,7 +1,6 @@
-
 <script type="text/javascript">
   /* <![CDATA[ */
-  (function() {
+  (function () {
     var s = document.createElement('script');
     var t = document.getElementsByTagName('script')[0];
 
@@ -15,26 +14,8 @@
 </script>
 
 
-<h1>Users#index</h1>
+<h1>User Powered Developer Incentive Program</h1>
 
 <%= @users.each do |user| -%>
-    <div class="jumbotron">
-
-      <%= image_tag user.avatar.url, style: 'width: 200px' -%>
-
-      <h3><%= user.name -%></h3>
-      <ul>
-        <% unless user.flattr.blank? %>
-          <li><p><%= user.flattr -%></p></li>
-
-            <a class="FlattrButton" style="display:none;"
-               title="This is my title"
-               rel="flattr;uid:<%= user.flattr -%>;category:text;tags:tag,tag2,tag3;"
-               href="http://wp.local/?p=444">
-            </a>
-
-        <% end %>
-      </ul>
-
-    </div>
+    <%= render 'card', user: user %>
 <% end %>
