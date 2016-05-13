@@ -16,6 +16,7 @@
 
       <div class="form-horizontal">
 
+        <% unless user.flattr.blank? %>
         <!-- Flattr Button -->
         <div class="form-group">
           <label for="flattrButton" class="col-sm-2 control-label">Flattr</label>
@@ -27,7 +28,9 @@
             </a>
           </div>
         </div>
+        <% end %>
 
+        <% unless user.bitcoin_address.blank? %>
         <!-- Bitcoin Address -->
         <div class="form-group">
           <label for="bitcoinAddress" class="col-sm-2 control-label">Bitcoin</label>
@@ -36,7 +39,9 @@
                    readonly value="<%= user.bitcoin_address -%>"/>
           </div>
         </div>
+        <% end %>
 
+        <% unless user.patreon.blank? %>
         <!-- Patreon -->
         <div class="form-group">
           <label for="patreon" class="col-sm-2 control-label">Patreon</label>
@@ -44,10 +49,11 @@
             
             <div class="alignment">
               <%= link_to user.patreon %>
-            
-              <div>
+            </div>
+             
           </div>
         </div>
+        <% end %>
       </div>
     </div>
   </div>
