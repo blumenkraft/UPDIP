@@ -9,13 +9,31 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
  *= require_tree .
  *= require_self
  */
 
-
+body {
+  background-image: url(/assets/background.jpg);
+  background-size: cover;
+  color: #FFF8DA !important;
+}
 .alignment {
   padding-top: 0.6em;
 }
- 
+.main-head {
+  color: #FFF8DA;
+  margin-bottom: 2em;
+}
+.card {
+  background: #8F8F8F;
+  margin-bottom: 3em;
+  padding: 2em;
+  border-radius: 10px;
+}
+.sidebar {
+  font-size: 2em;
+}
+.username {
+  font-size: 2em;
+}

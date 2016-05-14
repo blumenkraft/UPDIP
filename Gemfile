@@ -48,3 +48,4 @@ group :development do
   gem 'spring'
 end
 
+gem 'rails-assets-clipboard', source: 'https://rails-assets.org'

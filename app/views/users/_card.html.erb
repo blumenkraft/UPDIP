@@ -1,4 +1,4 @@
-<div style="background: #d1b192; margin-top: 2em; padding: 2em;">
+<div class="card">
 
   <div class="row">
     <div class="col-sm-12">
@@ -6,10 +6,10 @@
 
       <div class="row">
         <div class="col-sm-2 text-right">
-          <%= image_tag(user.avatar.url, style: 'width: 100px', class: 'img-circle') -%>
+          <%= image_tag(user.avatar.url, style: 'width: 80px; margin-bottom: 2em', class: 'img-rounded') -%>
         </div>
         <div class="col-sm-10">
-          <h1> <%= user.username -%></h1>
+          <span class="username"> <%= user.username -%> </span>
         </div>
       </div>
 
@@ -35,8 +35,15 @@
         <div class="form-group">
           <label for="bitcoinAddress" class="col-sm-2 control-label">Bitcoin</label>
           <div class="col-sm-10">
-            <input type="text" id="bitcoinAddress" class="form-control"
+            <div class="input-group">
+            <input type="text" id="bitcoin<%= user.id %>" class="form-control"
                    readonly value="<%= user.bitcoin_address -%>"/>
+                     <span class="input-group-btn">
+                       <button class="btn btn-default" data-clipboard-target="#bitcoin<%= user.id %>">
+                       copy
+                     </button>
+                   </span>
+            </div>
           </div>
         </div>
         <% end %>
