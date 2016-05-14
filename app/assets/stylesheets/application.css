@@ -26,10 +26,10 @@ body {
   margin-bottom: 2em;
 }
 .card {
-  background: #556867;
   margin-bottom: 3em;
   padding: 2em;
   border-radius: 10px;
+  -webkit-backdrop-filter: blur(80px);
 }
 .sidebar {
   font-size: 2em;
