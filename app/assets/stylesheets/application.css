@@ -9,9 +9,11 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
+ *= require bootstrap
  *= require_tree .
  *= require_self
  */
+
 
 body {
   background-image: url(/assets/background.jpg);
@@ -61,7 +63,6 @@ body {
 .card:hover:after {
   opacity: 1;
 }
-
 
 .sidebar {
   font-size: 2em;

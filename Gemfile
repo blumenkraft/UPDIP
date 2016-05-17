@@ -49,3 +49,4 @@ group :development do
 end
 
 gem 'rails-assets-clipboard', source: 'https://rails-assets.org'
+gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
