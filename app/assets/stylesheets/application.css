@@ -16,6 +16,9 @@
 
 
 body {
+  font-family: 'HKGroteskRegular';
+  font-weight: normal; 
+  font-style: normal;
   background-image: url(/assets/background.jpg);
   background-size: cover;
   color: #FFF8DA !important;
@@ -26,6 +29,8 @@ body {
 .main-head {
   color: #FFF8DA;
   margin-bottom: 2em;
+  font-weight: bold; 
+  font-style: normal;
 }
 .card {
   margin-bottom: 3em;
@@ -66,6 +71,8 @@ body {
 
 .sidebar {
   font-size: 2em;
+  font-weight: normal; 
+  font-style: normal;
 }
 .username {
   font-size: 2em;
