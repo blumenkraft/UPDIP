@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160513200354) do
+ActiveRecord::Schema.define(version: 20160517181209) do
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160513200354) do
     t.datetime "avatar_updated_at"
     t.string   "patreon"
     t.string   "appdotnet"
+    t.text     "description"
   end
 
 end
