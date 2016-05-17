@@ -9,7 +9,13 @@
           <%= image_tag(user.avatar.url, style: 'width: 80px; margin-bottom: 2em', class: 'img-rounded') -%>
         </div>
         <div class="col-sm-10">
-          <span class="username">@<%= user.username -%></span>
+          <div class="username">
+            @<%= user.username -%>
+          </div>
+          <p>
+            <%= raw user.description -%>
+          </p>
+            
         </div>
       </div>
 

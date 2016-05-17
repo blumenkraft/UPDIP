@@ -23,6 +23,16 @@ body {
   background-size: cover;
   color: #FFF8DA !important;
 }
+
+a, a:visited, a:hover {
+  color: #FFF8AA;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #AAA8DD;
+}
+
 .alignment {
   padding-top: 0.6em;
 }
