@@ -50,5 +50,9 @@ group :development do
   gem 'capistrano'
 end
 
+group :production do
+  gem 'mysql2'
+end
+
 gem 'rails-assets-clipboard', source: 'https://rails-assets.org'
 gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
