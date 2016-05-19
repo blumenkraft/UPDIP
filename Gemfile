@@ -46,6 +46,8 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'capistrano'
 end
 
 gem 'rails-assets-clipboard', source: 'https://rails-assets.org'
