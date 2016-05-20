@@ -15,7 +15,7 @@
           <p>
             <%= raw user.description -%>
           </p>
-            
+
         </div>
       </div>
 
@@ -27,11 +27,22 @@
             <div class="form-group">
               <label for="flattrButton" class="col-sm-2 control-label">Flattr</label>
               <div class="col-sm-10">
-                <a id="flattrButton" class="FlattrButton" style="display:none;"
-                   title="This is my title"
-                   rel="flattr;uid:<%= user.flattr -%>;category:text;tags:tag,tag2,tag3;"
-                   href="http://wp.local/?p=444">
-                </a>
+
+
+                <div>
+                  <script id='<%= user.flattr.downcase -%>'>(function (i) {
+                    var f, s = document.getElementById(i);
+                    f = document.createElement('iframe');
+                    f.src = '//button.flattr.com/view/?user_id=<%= user.flattr.downcase %>&button=compact&url=' + encodeURIComponent(document.URL);
+                    f.title = 'Flattr';
+                    f.height = 20;
+                    f.width = 110;
+                    f.style.borderWidth = 0;
+                    s.parentNode.insertBefore(f, s);
+                  })('fb409xu');</script>
+                </div>
+
+
               </div>
             </div>
         <% end %>
@@ -55,17 +66,17 @@
         <% end %>
 
         <% unless user.patreon.blank? %>
-        <!-- Patreon -->
-        <div class="form-group">
-          <label for="patreon" class="col-sm-2 control-label">Patreon</label>
-          <div class="col-sm-10">          
-            
-            <div class="alignment">
-              <%= link_to user.patreon, user.patreon %>
+            <!-- Patreon -->
+            <div class="form-group">
+              <label for="patreon" class="col-sm-2 control-label">Patreon</label>
+              <div class="col-sm-10">
+
+                <div class="alignment">
+                  <%= link_to user.patreon, user.patreon %>
+                </div>
+
+              </div>
             </div>
-             
-          </div>
-        </div>
         <% end %>
       </div>
     </div>
