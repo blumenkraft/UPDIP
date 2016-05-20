@@ -104,7 +104,6 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.12.0)
-    mysql2 (0.4.4)
     nested_form (0.3.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -117,6 +116,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    pg (0.18.4)
     rack (1.6.4)
     rack-pjax (0.8.0)
       nokogiri (~> 1.5)
@@ -218,8 +218,8 @@ DEPENDENCIES
   dotenv-rails
   jbuilder (~> 2.0)
   jquery-rails
-  mysql2
   paperclip
+  pg
   rails (= 4.2.6)
   rails-assets-bootstrap!
   rails-assets-clipboard!

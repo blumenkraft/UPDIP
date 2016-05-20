@@ -53,7 +53,7 @@ group :development do
 end
 
 group :production do
-  gem 'mysql2'
+  gem 'pg'
 end
 
 gem 'rails-assets-clipboard', source: 'https://rails-assets.org'
