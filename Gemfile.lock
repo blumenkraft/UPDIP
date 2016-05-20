@@ -223,6 +223,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  capistrano-bundler
   capistrano-env-config
   capistrano-passenger
   capistrano-rails

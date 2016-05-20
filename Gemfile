@@ -52,6 +52,7 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-env-config'
   gem 'capistrano-passenger'
+  gem 'capistrano-bundler'
 end
 
 group :production do
