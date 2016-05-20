@@ -7,7 +7,7 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
-server 'updip.link', user: 'updip', roles: %w(app db web)
+server ENV['PRODUCTION_SERVER'], user: ENV['PRODUCTION_USER'], roles: %w(app db web)
 
 # role-based syntax
 # ==================
