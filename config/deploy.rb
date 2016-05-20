@@ -10,6 +10,13 @@ set :repo_url, ENV['REPO_URL']
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, ENV['DEPLOY_TO']
 
+set :rbenv_type, :user
+set :rbenv_custom_path, ENV['RBENV_CUSTOM_PATH']
+set :rbenv_ruby, File.read('.ruby-version').strip
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+set :rbenv_map_bins, %w{rake gem bundle ruby rails}
+set :rbenv_roles, :all
+
 # Default value for :scm is :git
 # set :scm, :git
 
@@ -36,6 +43,13 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 # set :keep_releases, 5
 
 namespace :deploy do
+
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute :touch, release_path.join('tmp/restart.txt')
+    end
+  end
 
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
