@@ -50,6 +50,9 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
+    capistrano-env-config (0.3.0)
+      capistrano (~> 3.0)
+      dotenv (~> 2.0)
     capistrano-harrow (0.5.1)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -210,6 +213,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capistrano
+  capistrano-env-config
   coffee-rails (~> 4.1.0)
   dotenv-rails
   jbuilder (~> 2.0)

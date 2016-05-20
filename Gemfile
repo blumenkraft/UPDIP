@@ -49,6 +49,7 @@ group :development do
   gem 'spring'
 
   gem 'capistrano'
+  gem 'capistrano-env-config'
 end
 
 group :production do
