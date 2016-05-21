@@ -30,7 +30,7 @@
 
 
                 <div>
-                  <script id='<%= user.flattr.downcase -%>'>(function (i) {
+                  <script id='fltr<%= user.flattr.downcase -%>'>(function (i) {
                     var f, s = document.getElementById(i);
                     f = document.createElement('iframe');
                     f.src = '//button.flattr.com/view/?user_id=<%= user.flattr.downcase %>&button=compact&url=' + encodeURIComponent(document.URL);
@@ -39,7 +39,7 @@
                     f.width = 110;
                     f.style.borderWidth = 0;
                     s.parentNode.insertBefore(f, s);
-                  })('fb409xu');</script>
+                  })('fltr<%= user.flattr.downcase -%>');</script>
                 </div>
 
 
