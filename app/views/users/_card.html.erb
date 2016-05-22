@@ -78,6 +78,21 @@
               </div>
             </div>
         <% end %>
+
+        <% unless user.paypal.blank? %>
+            <!-- Patreon -->
+            <div class="form-group">
+              <label for="paypal" class="col-sm-2 control-label">PayPal</label>
+              <div class="col-sm-10">
+
+                <div class="alignment">
+                  <%= link_to 'Donate with PayPal', user.paypal, class: 'btn btn-success', target: '_blank' %>
+                </div>
+              </div>
+            </div>
+        <% end %>
+
+
       </div>
     </div>
   </div>
