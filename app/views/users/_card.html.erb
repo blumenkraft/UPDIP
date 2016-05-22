@@ -29,7 +29,7 @@
               <div class="col-sm-10">
 
 
-                <div>
+                <div class="alignment">
                   <script id='fltr<%= user.flattr.downcase -%>'>(function (i) {
                     var f, s = document.getElementById(i);
                     f = document.createElement('iframe');
@@ -57,7 +57,7 @@
                          readonly value="<%= user.bitcoin_address -%>"/>
                      <span class="input-group-btn">
                        <button class="btn btn-default" data-clipboard-target="#bitcoin<%= user.id %>">
-                       <img class="clippy" src="<%= asset_path('clippy.svg')%>" width="13" alt="Copy to Clipboard"/>
+                       <img class="clippy" src="<%= asset_path('clippy.svg') %>" width="13" alt="Copy to Clipboard"/>
                      </button>
                    </span>
                 </div>
@@ -71,9 +71,7 @@
               <label for="patreon" class="col-sm-2 control-label">Patreon</label>
               <div class="col-sm-10">
 
-                <div class="alignment">
-                  <%= link_to 'Become a patreon', user.patreon, class: 'btn btn-success', target: '_blank' %>
-                </div>
+                <%= link_to 'Become a patreon', user.patreon, class: 'btn btn-success', target: '_blank' %>
 
               </div>
             </div>
@@ -85,7 +83,7 @@
               <label for="paypal" class="col-sm-2 control-label">PayPal</label>
               <div class="col-sm-10">
 
-                <div class="alignment">
+                <div>
                   <%= link_to 'Donate with PayPal', user.paypal, class: 'btn btn-success', target: '_blank' %>
                 </div>
               </div>
