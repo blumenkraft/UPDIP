@@ -5,10 +5,10 @@
 
 
       <div class="row">
-        <div class="col-sm-2 text-right">
-          <%= image_tag(user.avatar.url, style: 'width: 80px; margin-bottom: 2em', class: 'img-rounded') -%>
+        <div class="col-sm-3 text-right">
+          <%= image_tag(user.avatar.url, class: 'img-rounded img-responsive') -%>
         </div>
-        <div class="col-sm-10 user-description">
+        <div class="col-sm-9 user-description">
           <div class="username">
             @<%= user.username -%>
           </div>
@@ -25,8 +25,8 @@
         <% unless user.flattr.blank? %>
             <!-- Flattr Button -->
             <div class="form-group">
-              <label for="flattrButton" class="col-sm-2 control-label">Flattr</label>
-              <div class="col-sm-10">
+              <label for="flattrButton" class="col-sm-3 control-label">Flattr</label>
+              <div class="col-sm-9">
 
 
                 <div class="alignment">
@@ -50,8 +50,8 @@
         <% unless user.bitcoin_address.blank? %>
             <!-- Bitcoin Address -->
             <div class="form-group">
-              <label for="bitcoinAddress" class="col-sm-2 control-label">Bitcoin</label>
-              <div class="col-sm-10">
+              <label for="bitcoinAddress" class="col-sm-3 control-label">Bitcoin</label>
+              <div class="col-sm-9">
                 <div class="input-group">
                   <input type="text" id="bitcoin<%= user.id %>" class="form-control"
                          readonly value="<%= user.bitcoin_address -%>"/>
@@ -68,8 +68,8 @@
         <% unless user.patreon.blank? %>
             <!-- Patreon -->
             <div class="form-group">
-              <label for="patreon" class="col-sm-2 control-label">Patreon</label>
-              <div class="col-sm-10">
+              <label for="patreon" class="col-sm-3 control-label">Patreon</label>
+              <div class="col-sm-9">
 
                 <%= link_to 'Become a patreon', user.patreon, class: 'btn btn-success', target: '_blank' %>
 
@@ -80,8 +80,8 @@
         <% unless user.paypal.blank? %>
             <!-- Patreon -->
             <div class="form-group">
-              <label for="paypal" class="col-sm-2 control-label">PayPal</label>
-              <div class="col-sm-10">
+              <label for="paypal" class="col-sm-3 control-label">PayPal</label>
+              <div class="col-sm-9">
 
                 <div>
                   <%= link_to 'Donate with PayPal', user.paypal, class: 'btn btn-success', target: '_blank' %>
