@@ -64,3 +64,4 @@ end
 
 gem 'rails-assets-clipboard', source: 'https://rails-assets.org'
 gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
+gem 'rails-assets-animate.css', source: 'https://rails-assets.org'
