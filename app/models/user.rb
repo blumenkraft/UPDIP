@@ -3,6 +3,10 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   before_save :fetch_avatar
+  
+  scope :search, ->(query) {
+    where('username like ? or description like ?', "%#{query}%", "%#{query}%")
+  }
 
   def fetch_avatar
     self.avatar = open("https://api.app.net/users/@#{self.username}/avatar")
