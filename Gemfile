@@ -62,6 +62,8 @@ group :production do
   gem 'pg'
 end
 
+gem 'react-rails'
+
 gem 'rails-assets-clipboard', source: 'https://rails-assets.org'
 gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
 gem 'rails-assets-animate.css', source: 'https://rails-assets.org'
