@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require bootstrap
 //= require clipboard
-//= require_tree .
+//= require users
 
 $(document).ready(function () {
   var clip = new Clipboard('.btn');
