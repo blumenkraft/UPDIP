@@ -8,15 +8,14 @@
   <% csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
+
   <%= render 'shared/nav' %>
-  
-  <div class="row">
+
+  <main class="site-content container">
     <div class="col-sm-12">
       <%= yield %>
     </div>
-  </div>
-</div>
+  </main>
 
 
 <footer>
@@ -29,3 +28,4 @@
 
 </body>
 </html>
+

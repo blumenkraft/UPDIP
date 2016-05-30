@@ -5,6 +5,14 @@ body {
   background-image: image-url('background.jpg');
   background-size: cover;
   color: #FFF8DA !important;
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
 }
 
 a.headline, a.headline:hover {
