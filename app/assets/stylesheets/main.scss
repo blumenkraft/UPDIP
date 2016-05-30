@@ -7,6 +7,10 @@ body {
   color: #FFF8DA !important;
 }
 
+a.headline, a.headline:hover {
+  text-decoration: none;
+}
+
 .search-field {
   margin-bottom: 1.5em;
 }
