@@ -1,4 +1,13 @@
 <div class="col-sm-7">
+  <form class="visible-xs" action="/">
+    <div class="input-group search-field">
+      <input type="text" name="search" class="form-control animated-search-filter" placeholder="Search for developer or app">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="submit">Go!</button>
+    </span>
+    </div>
+  </form>
+
   <div class="animated-search-filter">
     <% @users.each do |user| -%>
         <%= render 'card', user: user %>
@@ -7,7 +16,7 @@
 </div>
 
 <div class="sidebar col-sm-5">
-  <form action="/">
+  <form class="hidden-xs" action="/">
     <div class="input-group search-field">
       <input type="text" name="search" class="form-control animated-search-filter" placeholder="Search for developer or app">
     <span class="input-group-btn">
