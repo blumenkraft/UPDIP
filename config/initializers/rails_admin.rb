@@ -34,4 +34,11 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.authorize_with do
+    redirect_to root_path unless authenticate_or_request_with_http_basic do |user, passwd|
+      (user == ENV['APP_USER'] && passwd == ENV['APP_PASSWD']) ? true : false
+    end
+  end
+
 end
