@@ -1,0 +1,120 @@
+body {
+  font-family: 'HKGroteskRegular';
+  font-weight: normal;
+  font-style: normal;
+  background-image: url('/img/background.jpg');
+  background-size: cover;
+  color: #FFF8DA !important;
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+a.headline, a.headline:hover {
+  text-decoration: none;
+}
+
+.search-field {
+  margin-bottom: 1.5em;
+}
+
+.search-field input {
+  font-family: 'HKGroteskRegular';
+}
+
+.logo {
+  height: 6.5em;
+  float: left;
+  margin-right: 15px;
+  -webkit-animation-duration: 5s;
+}
+
+a, a:visited, a:hover {
+  color: #FFF8AA;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #AAA8DD;
+}
+
+.alignment {
+  padding-top: 0.6em;
+}
+
+.main-head {
+  color: #FFF8DA;
+  margin-bottom: 2em;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.card {
+  margin-bottom: 3em;
+  padding: 2em;
+  background: rgba(34, 34, 34, 0.2);
+  border-radius: 20px;
+
+  box-shadow: inset 0 0 8px rgba(47, 47, 47, 0.2);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover {
+  -webkit-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05)
+}
+
+.card:after {
+  content: "";
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
+}
+
+.card:hover:after {
+  opacity: 1;
+}
+
+.sidebar {
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.username {
+  font-size: 2em;
+}
+
+footer {
+  background: #525250;
+  height: 10em;
+  opacity: 0.8;
+  padding-top: 2em;
+}
+
+
+.btn-success, .btn-success:hover {
+  background-color: #525250;
+  border-color: #525250;
+}
+
+.user-description {
+  margin-bottom: 1.5em;
+}
+
+input.form-control {
+  color: #FFF8AA;
+  background: #525250 !important;
+  border-color: #525250;
+}
