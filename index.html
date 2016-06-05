@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% for card_hash in site.data.cards %}
+{% for card_hash in site.data.cards limit:5 offset:10 %}
 {% assign card = card_hash[1] %}
 
 <div class="card">
