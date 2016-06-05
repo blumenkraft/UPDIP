@@ -23,3 +23,36 @@ $(function () {
     this.src = '/img/missing.png'
   });
 });
+
+
+$(function () {
+
+  var nextPage = 2;
+
+  function readyForNextPage() {
+    if (!$('#next_page_spinner').is(':visible')) return;
+
+    var threshold = 200;
+    var bottomPosition = $(window).scrollTop() + $(window).height();
+    var distanceFromBottom = $(document).height() - bottomPosition;
+    return distanceFromBottom <= threshold;
+  }
+
+  function observeScroll() {
+    if (readyForNextPage()) {
+      getNextPage();
+    }
+  }
+  $(document).scroll(observeScroll);
+
+  function getNextPage() {
+    $.get('/cards' + nextPage, function (data) {
+      $('#content').append(data);
+      $('.img-avatar').one('error', function () {
+        this.src = '/img/missing.png'
+      });
+    }).done(function () {
+      nextPage++;
+    })
+  }
+});

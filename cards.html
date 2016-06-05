@@ -1,0 +1,14 @@
+---
+layout: null
+paginate:
+  collection: cards
+  permalink: /cards:num/
+  per_page: 5
+  limit: false
+---
+
+{% for card in paginator.cards %}
+
+    {% include card.html %}
+
+{% endfor %}

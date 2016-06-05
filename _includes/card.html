@@ -1,0 +1,96 @@
+<div class="card">
+
+    <div class="row">
+        <div class="col-sm-12">
+
+
+            <div class="row">
+                <div class="col-sm-3 text-right">
+                    <img src="/img/{{ card.username }}.png" alt="Avatar" class="img-avatar img-rounded img-responsive">
+                </div>
+                <div class="col-sm-9 user-description">
+                    <div class="username">
+                        @{{ card.username }}
+                    </div>
+
+                    {{ card.content }}
+
+                </div>
+            </div>
+
+
+            <div class="form-horizontal">
+
+                {% if card.flattr %}
+                <!-- Flattr Button -->
+                <div class="form-group">
+                    <label for="flattrButton" class="col-sm-3 control-label">Flattr</label>
+                    <div class="col-sm-9">
+
+                        <div class="alignment">
+                            <script id='fltr{{ card.flattr }}'>(function (i) {
+                                var f, s = document.getElementById(i);
+                                f = document.createElement('iframe');
+                                f.src = '//button.flattr.com/view/?user_id={{ card.flattr }}&button=compact&url=' + encodeURIComponent(document.URL);
+                                f.title = 'Flattr';
+                                f.height = 20;
+                                f.width = 110;
+                                f.style.borderWidth = 0;
+                                s.parentNode.insertBefore(f, s);
+                            })('fltr{{ card.flattr }}');</script>
+                        </div>
+
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if card.bitcoin %}
+                <!-- Bitcoin Address -->
+                <div class="form-group">
+                    <label for="bitcoinAddress" class="col-sm-3 control-label">Bitcoin</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text" id="bitcoin{{ card.username }}" class="form-control"
+                                   readonly value="{{ card.bitcoin}}"/>
+                     <span class="input-group-btn">
+                       <button class="btn btn-default" data-clipboard-target="#bitcoin{{ card.username }}">
+                       <img class="clippy" src="/img/clippy.svg" width="13" alt="Copy to Clipboard"/>
+                     </button>
+                   </span>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if card.patreon %}
+                <!-- Patreon -->
+                <div class="form-group">
+                    <label for="patreon" class="col-sm-3 control-label">Patreon</label>
+                    <div class="col-sm-9">
+
+                        <a href="{{ card.patreon }}" class="btn btn-success" target="_blank">Become a patreon</a>
+
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if card.paypal %}
+                <!-- Patreon -->
+                <div class="form-group">
+                    <label for="paypal" class="col-sm-3 control-label">PayPal</label>
+                    <div class="col-sm-9">
+
+                        <div>
+
+                            <a href="{{ card.paypal }}" class="btn btn-success" target="_blank">Donate with Paypal</a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
