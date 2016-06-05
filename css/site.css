@@ -2,8 +2,8 @@ body {
     font-family: 'HKGroteskRegular';
     font-weight: normal;
     font-style: normal;
-    background-image: url('/img/background.jpg');
     background-size: cover;
+    background: url('/img/background.jpg') fixed;
     color: #FFF8DA !important;
 
     display: flex;
