@@ -1,9 +1,11 @@
 ---
 layout: default
+paginate:
+  collection: cards
+  per_page: 10
 ---
 
-{% for card_hash in site.data.cards limit:5 offset:10 %}
-{% assign card = card_hash[1] %}
+{% for card in paginator.cards %}
 
 <div class="card">
 
@@ -20,7 +22,8 @@ layout: default
                         @{{ card.username }}
                     </div>
 
-                    {{ card.description | markdownify }}
+                    {{ card.content }}
+
                 </div>
             </div>
 
