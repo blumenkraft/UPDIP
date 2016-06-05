@@ -1,5 +1,5 @@
 ---
-username: Polarbear
+username: polarbear
 name: Andre Weier
 ---
 
