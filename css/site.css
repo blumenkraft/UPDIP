@@ -2,7 +2,7 @@ body {
     font-family: 'HKGroteskRegular';
     font-weight: normal;
     font-style: normal;
-    background-image: url('/img/background.jpg');
+    background: url('/img/background.jpg') no-repeat center fixed;
     background-size: cover;
     color: #FFF8DA !important;
 
